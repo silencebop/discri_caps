@@ -269,7 +269,7 @@ def train_eval(subject_out_idx):
 
 if __name__ == '__main__':
     viz = Visdom(env='my_dis')
-    for i in range(1):  # 68 data_subs in total from 3 datasets + 98 data_subs from CK+
+    for i in range(NUM):  # 68 data_subs in total from 3 datasets + 98 data_subs from CK+
         scores = train_eval(subject_out_idx=i)
         batches_scores.append(scores)
         x_scores = x_meter.value()
